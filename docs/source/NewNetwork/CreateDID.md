@@ -6,7 +6,7 @@ You will need to perform the following commands once for each CLI machine that y
    All following commands are executing inside the cli.
 2. Create a wallet with `wallet create wallet_name key=<wallet_key>`
 
-   Where wallet_key is a secure key that only you should know. Quotes are not required for this key. Save it in a secure place for later use. You will use it every time you need to run Trustee commands.
+   Where wallet_key is a secure key that only you should know. Quotes are not required for this key. Save it in a secure place for later use. You will use it every time you need to send transactions to the ledger from the cli.
 3. `wallet open wallet_name key=<wallet_key>`
 4. `did new seed=<SEED>`
    If you have lost your original seed or have never created one, then create a new one. This seed is used to regenerate your DID and to add your DID to your wallet(s).  

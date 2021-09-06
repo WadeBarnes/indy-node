@@ -6,7 +6,7 @@ The purpose of this document is to describe in some detail the process of buildi
 It goes more into details than [Starting a Network](../start-nodes.md).
 These instructions are intended to be used for a distributed or “production” level environment, but can be adapted to be used to build a private network.
 
-It ist heavily based on [Create New Indy Network](https://docs.google.com/document/d/1XE2QOiGWuRzWdlxiI9LrG9Am9dCfPXBXnv52wGHorNE).
+It is heavily based on [Create New Indy Network](https://docs.google.com/document/d/1XE2QOiGWuRzWdlxiI9LrG9Am9dCfPXBXnv52wGHorNE).
 
 ## Steps
 
@@ -35,7 +35,7 @@ It ist heavily based on [Create New Indy Network](https://docs.google.com/docume
 
    Each Genesis Steward’s node information will be included in the Genesis Pool file, so they should be willing to install and maintain a Node on the new Network for an extended period of time.
 
-   Genereta Stewards DIDs as described in [Creating DID](./CreateDID.md) and [Validator Node keys](#CreateValidatorKeys)
+   Generate Stewards DIDs as described in [Creating DID](./CreateDID.md) and [Validator Node keys](#CreateValidatorKeys)
    
    To create the Validator Node keys you have to have indy-node installed.
    Just run `init_indy_node <ALIAS> <node ip> <node port> <client ip> <client port>`.
@@ -45,7 +45,7 @@ It ist heavily based on [Create New Indy Network](https://docs.google.com/docume
    Create and give Genesis Stewards access to a spreadsheet like [this one](https://docs.google.com/spreadsheets/d/1LDduIeZp7pansd9deXeVSqGgdf0VdAHNMc7xYli3QAY/edit#gid=0) and have them fill out their own row with the DID and Validator Node information.
 
 ### Create and Distribute genesis transaction file
-   Use the following [script](https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis) with the  2 spreadsheets as input to create the genesis transaction file.
+   Use the following [script](https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis) with the 2 spreadsheets as input to create the genesis transaction file.
 
 ### Schedule a meeting to instantiate the new network
 

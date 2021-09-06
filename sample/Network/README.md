@@ -27,7 +27,7 @@ This walkthrough goes through the detailed steps mentioned in [New Network from 
 
 4. Create DIDs for Stewards
 
-   For the sake of this tutorial all DIDs and Stewards are running on the same machine. Normally this woulb be independent machines and organizations.
+   For the sake of this tutorial all DIDs and Stewards are running on the same machine. Normally this would be independent machines and organizations.
 
    ```
    newNetwork:indy> did new seed=000000000000000000000000Steward1
@@ -99,7 +99,7 @@ This walkthrough goes through the detailed steps mentioned in [New Network from 
 
 6. Fill the spreadsheet.
    
-7. Generate the genesis file.
+7. Download the script from [https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis] and generate the genesis file.
 
    ```
    $ python genesis_from_files.py --trustees Trustees.csv --stewards Stewards.csv 

@@ -9,7 +9,8 @@ Step-by-step assistance for each method listed below is available.
 
 ## Windows:
 To install the CLI on windows 10 perform the following steps:
-1. Download https://repo.sovrin.org/windows/indy-cli/stable/1.14.2/indy-cli_1.14.2.zip and unzip it.
+1. Download https://repo.sovrin.org/windows/indy-cli/stable/1.16.0/indy-cli_1.16.0.zip and unzip it.
+   If there a newer versions under https://repo.sovrin.org/windows/indy-cli/stable/ use them instead.
 2. Create a JSON Config file containing your taaAcceptanceMechanism in the directory where indy-cli.exe resides (I created \Users\LBendixsen\Downloads\indy-cli_1.14.2\cliconfig.json on my machine)
 ```json
 {
@@ -23,7 +24,7 @@ Rerun indy-cli.exe to see if it works as described in previous step.
 5. Type ‘exit’ in the indy-cli
 6. Open a command prompt.  (This will work differently if you use Windows Terminal)
 cd to the directory where you unzipped the indy-cli package.
-For example, if you unzipped directly in your ‘downloads’ directory like I did you would type:  `cd \Users\LBendixsen\Downloads\indy-cli_1.14.2`
+For example, if you unzipped directly in your ‘downloads’ directory like I did you would type:  `cd \Users\<Username>\Downloads\indy-cli_1.14.2`
 
 ## Ubuntu:
 To install the CLI on Ubuntu, perform the following steps from the ubuntu command line:
@@ -66,7 +67,7 @@ Run the following commands in the terminal:
    NOTE: the openssl path needs to match what you currently have on your system
 
 9. Run  > `ls /usr/local/Cellar/openssl/`
-   Note the name of the directory shown (mine is 1.0.2p but latest is 1.0.2q) 
+   Note the name of the directory shown (the example below shows 1.0.2p but the latest version is 1.1.1l) 
  
    Use this directory in place of the one listed below in your .profile file 
 
