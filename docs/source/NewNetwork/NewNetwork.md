@@ -6,7 +6,7 @@ The purpose of this document is to describe in some detail the process of buildi
 It goes more into details than [Starting a Network](../start-nodes.md).
 These instructions are intended to be used for a distributed or “production” level environment, but can be adapted to be used to build a private network.
 
-It is heavily based on [Create New Indy Network](https://docs.google.com/document/d/1XE2QOiGWuRzWdlxiI9LrG9Am9dCfPXBXnv52wGHorNE).
+It is heavily based on [Create New Indy Network](https://docs.google.com/document/d/1XE2QOiGWuRzWdlxiI9LrG9Am9dCfPXBXnv52wGHorNE) and the [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
 
 ## Steps
 
@@ -35,7 +35,7 @@ It is heavily based on [Create New Indy Network](https://docs.google.com/documen
 
    Each Genesis Steward’s node information will be included in the Genesis Pool file, so they should be willing to install and maintain a Node on the new Network for an extended period of time.
 
-   Generate Stewards DIDs as described in [Creating DID](./CreateDID.md) and [Validator Node keys](#CreateValidatorKeys)
+   Generate Stewards DIDs as described in [Creating DID](./CreateDID.md).
    
    To create the Validator Node keys you have to have indy-node installed.
    Just run `init_indy_node <ALIAS> <node ip> <node port> <client ip> <client port>`.
@@ -57,11 +57,13 @@ It is heavily based on [Create New Indy Network](https://docs.google.com/documen
    + Check network communication from one node to each other node on the client IP and port, and also check from a client on the internet to see that all Client IPs and ports are accessible. Node ports can be checked after the Network is up and running.  (e.g. nc -vz <IP> <port> can be used to check connectivity)
 
    1. Start all the nodes as described in [Start Nodes](../start-nodes.md)
+     > This method of starting nodes is for provisional (test) networks. The preferred method for production level networks is documented in the [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
+     However, since, for the purposes of the demo, the nodes are all running on the same machine you sort of have to do it this way.
     
    2. Validate the Nodes with the `validator-info` script.
 
 ## Where to go from here?
-The network can be hardened by cofiguring [AUTH-RULES](https://docs.google.com/document/d/1xk0A5FljKOZ2Fazri6J5mAfnYWXdOMl2LwrFK16MJIY/edit) and [TransactionAuthorAgreements](https://github.com/hyperledger/indy-plenum/blob/master/docs/source/transaction_author_agreement.md)
+The network can be hardened by configuring [AUTH-RULES](https://docs.google.com/document/d/1xk0A5FljKOZ2Fazri6J5mAfnYWXdOMl2LwrFK16MJIY/edit) and [TransactionAuthorAgreements](https://github.com/hyperledger/indy-plenum/blob/master/docs/source/transaction_author_agreement.md)
 
 ## Hands On Walkthrough
 

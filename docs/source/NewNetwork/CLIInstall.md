@@ -7,11 +7,13 @@ It has been recommended that you should install the CLI in your native work envi
 If you choose to install a VM for the CLI, or you already have one set up, that is fine, but please make sure that the CLI environment is set up on a machine or VM that you can access even while traveling.
 Step-by-step assistance for each method listed below is available.
 
+Another option for the indy-cli would be using the containerized indy-cli from the [von-network](https://github.com/bcgov/von-network).
+
 ## Windows:
 To install the CLI on windows 10 perform the following steps:
 1. Download https://repo.sovrin.org/windows/indy-cli/stable/1.16.0/indy-cli_1.16.0.zip and unzip it.
    If there a newer versions under https://repo.sovrin.org/windows/indy-cli/stable/ use them instead.
-2. Create a JSON Config file containing your taaAcceptanceMechanism in the directory where indy-cli.exe resides (I created \Users\LBendixsen\Downloads\indy-cli_1.14.2\cliconfig.json on my machine)
+2. Create a JSON Config file containing your taaAcceptanceMechanism in the directory where indy-cli.exe resides (I created \Users\<Username>\Downloads\indy-cli_1.14.2\cliconfig.json on my machine)
 ```json
 {
 "taaAcceptanceMechanism": "for_session" 

@@ -1,6 +1,6 @@
 # Hands on Walkthrough
 
-This walkthrough goes through the detailed steps mentioned in [New Network from Scratch]()
+This walkthrough goes through the detailed steps mentioned in [New Network](../../docs/source/NewNetwork/NewNetwork.md)
 
 1. Open indy-cli by executing `indy-cli`
    
@@ -121,11 +121,14 @@ This walkthrough goes through the detailed steps mentioned in [New Network from 
 
 11. Start the nodes:
 
-   ```
-   start_indy_node Steward1 0.0.0.0 9701 0.0.0.0 9702
-   start_indy_node Steward2 0.0.0.0 9703 0.0.0.0 9704
-   start_indy_node Steward3 0.0.0.0 9705 0.0.0.0 9706
-   start_indy_node Steward4 0.0.0.0 9707 0.0.0.0 9708     
-   ```
+    ```
+    start_indy_node Steward1 0.0.0.0 9701 0.0.0.0 9702
+    start_indy_node Steward2 0.0.0.0 9703 0.0.0.0 9704
+    start_indy_node Steward3 0.0.0.0 9705 0.0.0.0 9706
+    start_indy_node Steward4 0.0.0.0 9707 0.0.0.0 9708     
+    ```
+
+     This method of starting nodes is for provisional (test) networks. The preferred method for production level networks is documented in the [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
+     However, since, for the purposes of the demo, the nodes are all running on the same machine you sort of have to do it this way.
 
 
