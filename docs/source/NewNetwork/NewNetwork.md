@@ -38,6 +38,7 @@ It is heavily based on [Create New Indy Network](https://docs.google.com/documen
    Generate Stewards DIDs as described in [Creating DID](./CreateDID.md).
    
    To create the Validator Node keys you have to have indy-node installed.
+   An installation process is described [here](./installation-and-configuration.md)
    Just run `init_indy_node <ALIAS> <node ip> <node port> <client ip> <client port>`.
    
    > WARNING!!! The seed that will be printed can be used to recreate the keys, so you have to store it safely!
