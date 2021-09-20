@@ -38,15 +38,16 @@ It is heavily based on [Create New Indy Network](https://docs.google.com/documen
    Generate Stewards DIDs as described in [Creating DID](./CreateDID.md).
    
    To create the Validator Node keys you have to have indy-node installed.
-   An installation process is described [here](./installation-and-configuration.md)
+   An installation process is described [here](../installation-and-configuration.md)
    Just run `init_indy_node <ALIAS> <node ip> <node port> <client ip> <client port>`.
    
    > WARNING!!! The seed that will be printed can be used to recreate the keys, so you have to store it safely!
 
-   Create and give Genesis Stewards access to a spreadsheet like [this one](https://docs.google.com/spreadsheets/d/1LDduIeZp7pansd9deXeVSqGgdf0VdAHNMc7xYli3QAY/edit#gid=0) and have them fill out their own row with the DID and Validator Node information.
+   Create and give Genesis Stewards access to a spreadsheet like [this one](https://docs.google.com/spreadsheets/d/1LDduIeZp7pansd9deXeVSqGgdf0VdAHNMc7xYli3QAY/edit#gid=0) and have them fill out their own row with the DID and Validator Node information. Note the 2 sheets in the linked spreadsheet. Both will be used in the next step. 
 
 ### Create and Distribute genesis transaction file
    Use the following [script](https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis) with the 2 spreadsheets as input to create the genesis transaction file.
+   If no spreadsheats are provided and the script is executed with the `-h` parameter, it will print out what csv files are needed.
 
 ### Schedule a meeting to instantiate the new network
 
@@ -57,8 +58,10 @@ It is heavily based on [Create New Indy Network](https://docs.google.com/documen
    + /etc/indy/indy.env - all nodes should have local ip addresses in this file and be pointing at the correct ports.
    + Check network communication from one node to each other node on the client IP and port, and also check from a client on the internet to see that all Client IPs and ports are accessible. Node ports can be checked after the Network is up and running.  (e.g. nc -vz <IP> <port> can be used to check connectivity)
 
-   1. Start all the nodes as described in [Start Nodes](../start-nodes.md)
-     > This method of starting nodes is for provisional (test) networks. The preferred method for production level networks is documented in the [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
+   1. Start all the nodes as described in [Start Nodes](../start-nodes.md) or [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
+   Normally this involves starting the indy-node-service with `sudo systemctl start indy-node`.
+   For testing on one machine we will use the `start_indy_node` command.
+     > The method of starting nodes with the `start_indy_node` is for provisional (test) networks. The preferred method for production level networks is documented in the [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
      However, since, for the purposes of the demo, the nodes are all running on the same machine you sort of have to do it this way.
     
    2. Validate the Nodes with the `validator-info` script.
@@ -68,4 +71,4 @@ The network can be hardened by configuring [AUTH-RULES](https://docs.google.com/
 
 ## Hands On Walkthrough
 
-An example Walkthrough of the above mentioned steps can be found in the `sample/Network` folder.
+An example Walkthrough of the above mentioned steps can be found in the `sample/Network` [folder](../../../sample/Network/README.md).
