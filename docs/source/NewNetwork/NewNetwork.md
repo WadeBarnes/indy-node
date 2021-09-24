@@ -46,8 +46,8 @@ It is heavily based on [Create New Indy Network](https://docs.google.com/documen
    Create and give Genesis Stewards access to a spreadsheet like [this one](https://docs.google.com/spreadsheets/d/1LDduIeZp7pansd9deXeVSqGgdf0VdAHNMc7xYli3QAY/edit#gid=0) and have them fill out their own row with the DID and Validator Node information. Note the 2 sheets in the linked spreadsheet. Both will be used in the next step. 
 
 ### Create and Distribute genesis transaction file
-   Use the following [script](https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis) with the 2 spreadsheets as input to create the genesis transaction file.
-   If no spreadsheats are provided and the script is executed with the `-h` parameter, it will print out what csv files are needed.
+   Use the following [script](https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis) with the 2 spreadsheets (one containing the genesis Trustee information, and one from the Stewards containing the Node and Steward information) as input to create the genesis transaction file.
+   If no spreadsheets are provided and the script is executed with the `-h` parameter, it will print out details of what is needed in each of the csv files.
 
 ### Schedule a meeting to instantiate the new network
 
