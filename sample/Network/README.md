@@ -1,6 +1,8 @@
 # Hands on Walkthrough
 
-This walkthrough goes through the detailed steps mentioned in [New Network](../../docs/source/NewNetwork/NewNetwork.md)
+This walkthrough goes through some of the detailed steps mentioned in [Setting up a New Network](../../docs/source/NewNetwork/NewNetwork.md)
+
+For the sake of simplicity this walkthrough runs all of the nodes on the local machine.  As a result it uses the local python install version of some of the commands rather than the production level Debian package install version of the commands documented in the [Setting up a New Network](../../docs/source/NewNetwork/NewNetwork.md) guide.
 
 1. Open indy-cli by executing `indy-cli`
    
@@ -12,6 +14,7 @@ This walkthrough goes through the detailed steps mentioned in [New Network](../.
 
    If not already opened, open the wallet
    `indy> wallet open newNetwork key=key`
+
 3. Create DIDs for Trustees.
 
    ```
@@ -97,7 +100,7 @@ This walkthrough goes through the detailed steps mentioned in [New Network](../.
    Proof of possession for BLS key is QsrUH1e5zsdiEGij1NeY9S7CwzUdU2rzjskHNGHCQ8rtgYZyBC99MgRPzgkJHP86nWQUo2fSRvyWLQdBwvWfNtSqUBQgVScQPHg9CJXWWohWnzSP4ViBo8EEeGXEoP2NPeRnFCCfuhYAC7stZgBATFyvdFRwG58ws76qQQQsfDDHBV
    ```
 
-6. Fill the spreadsheet.
+6. Fill in the spreadsheet.
    
 7. Download the script from [https://github.com/sovrin-foundation/steward-tools/tree/master/create_genesis] and generate the genesis file.
 
@@ -127,8 +130,3 @@ This walkthrough goes through the detailed steps mentioned in [New Network](../.
     start_indy_node Steward3 0.0.0.0 9705 0.0.0.0 9706
     start_indy_node Steward4 0.0.0.0 9707 0.0.0.0 9708     
     ```
-
-     This method of starting nodes is for provisional (test) networks. The preferred method for production level networks is documented in the [Steward Validator Preparation Guide v3](https://docs.google.com/document/d/18MNB7nEKerlcyZKof5AvGMy0GP9T82c4SWaxZkPzya4).
-     However, since, for the purposes of the demo, the nodes are all running on the same machine you sort of have to do it this way.
-
-
